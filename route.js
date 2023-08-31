@@ -38,7 +38,7 @@ const { db } = require("./schema/OrganizationDevices");
 const routes = new Router();
 
 routes.get("/", (ctx) => {
-  ctx.body = "Welcome to ORG Device Manager App";
+  ctx.body = "Welcome to CRUD APP";
 });
 
 //Organization routes

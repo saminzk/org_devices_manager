@@ -8,12 +8,10 @@ const {
 
 exports.createOrganization = async (ctx) => {
   try {
-    const  organizationName  = ctx.request.body.name;
-    // console.log("-----org name---------",organizationName);
+    const { organizationName } = ctx.request.body;
     const newOrg = await create(organizationName);
-    ctx.response.status = 201;
+
     ctx.response.body = newOrg;
-    // console.log(newOrg)
   } catch (err) {
     console.log(err);
   }

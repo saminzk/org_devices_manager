@@ -1,11 +1,9 @@
 const mongoose = require('mongoose');
-require('dotenv').config();
 
-let connectionString = process.env.DB_CONNECT_STRING ;
 const db = async()=>{
     try{
-        await mongoose.connect(connectionString);
-        console.log("connected to Database");
+        await mongoose.connect("mongodb://127.0.0.1:27017/crud_app");
+        console.log("connected");
     }catch(error){
         console.log(error);
     }
