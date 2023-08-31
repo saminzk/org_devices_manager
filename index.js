@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
-require('dotenv').config();
 const Koa = require("koa");
 const bodyParser = require("koa-bodyparser");
 const cors = require("koa2-cors");
 const router = require("./route");
 const db = require("./config/db");
-const port = process.env.PORT;
+const port = 8080;
 
 const app = new Koa();
 
