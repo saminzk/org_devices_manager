@@ -1,9 +1,10 @@
 const User = require("../schema/User");
 
-exports.createUser = async (name, email) => {
+exports.createUser = async (name, email, userRole='user') => {
   const newUser = new User({
     name,
     email,
+    userRole
   });
 
   await newUser.save();
